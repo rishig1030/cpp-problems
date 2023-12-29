@@ -9,7 +9,7 @@ int secondlargest(vector <int> a){
             max2=max;
             max=a[i];
         }
-        else if(max2<a[i] && max>=a[i]){
+        else if(max2<a[i] && max>a[i]){
             max2=a[i];
         }
     }
@@ -18,7 +18,7 @@ int secondlargest(vector <int> a){
 int main(){
     int y;
     vector <int> a;
-    a={3225,42,2,42,527,321};
+    a={3225,42,3225,42,527,321};
     y=secondlargest(a);
     cout<<y;
 }
