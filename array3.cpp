@@ -22,3 +22,6 @@ int main(){
     y=secondlargest(a);
     cout<<y;
 }
+/*another approach is that , i can traverse twice to find the second largest in an array   OR  
+i can simply change the value of largest element with the smallest element */
+//these are the two more method to find the second largest element 
