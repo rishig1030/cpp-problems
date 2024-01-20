@@ -1,6 +1,9 @@
 //decode a string , 1[b] as b and , 3b[2[ca]] as bcacabcacabcaca
 #include<bits/stdc++.h>
 using namespace std;
+//space complexity is O(n); size pf result string
+//time complexity is O(n); n is size of result string
+
 string decodedstr(string s1){
     //traversing a string
     string result="";
