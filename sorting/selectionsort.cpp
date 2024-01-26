@@ -11,7 +11,7 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
-    //time complexity would be worst case/best case O(n(n-1)/2) i.e. O(n)
+    //time complexity would be worst case/best case O(n(n-1)/2) i.e. O(n^2)
     for(int i=0;i<n-1;i++){
         int m=i;
         for(int j=i+1;j<n;j++){
