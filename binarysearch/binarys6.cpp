@@ -15,10 +15,7 @@ int lowerbound(int arr[],int left,int right,int target,int n){
         return n;
     }
     int mid=(left+right)/2;
-    if(arr[mid]==target){
-        return mid;
-    }
-    else if(arr[mid]>target){
+    if(arr[mid]>=target){
         n=mid;
         return lowerbound(arr,left,mid-1,target,n);
     }
@@ -35,6 +32,7 @@ int upperbound(int arr[],int left,int right,int target,int n){
     }
 
     int mid=(left+right)/2;
+    
     if(arr[mid]>target){
         n=mid;
         return upperbound(arr,left,mid-1,target,n);
@@ -57,10 +55,12 @@ pair<int,int> first_last(int arr[],int n,int target){
     else return {lb,up-1};
 }
 int main(){
-    int arr[] = {2,4,6,8,8,8,11,13};
+    int arr[] = {2,2,3,24,32,32,32,64};
     int target;
     cin>>target;
     cout<<first_last(arr,8,target).first<<" ";
     cout<<first_last(arr,8,target).second;
     return 0;
 }
+//time complexity = 2logN
+//space compexity = O(N)
