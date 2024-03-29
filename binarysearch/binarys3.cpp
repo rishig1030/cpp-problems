@@ -25,3 +25,5 @@ int main(){
     return 0;
 }
 //time complexity is same as binary search
+//if we need to find an indedx of a number to be inserted in an array while maintaining its sorted order
+//basically it can be solved by lower bound
