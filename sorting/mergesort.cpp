@@ -39,13 +39,14 @@ void f(int a[],int i,int n){
     f(a,mid+1,n); 
     merge(a,i,mid,n);
 }
+//12, 15, 23, 4 , 6, 10, 35, 28
 int main(){
     int n;cin>>n;
     int a[n];
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-    f(a,0,n);
+    f(a,0,n-1);
     for(int i=0;i<n;i++){
         cout<<a[i]<<" ";
     }
