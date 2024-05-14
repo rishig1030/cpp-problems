@@ -19,8 +19,9 @@ void deletenode(int position,node* &head,node* &tail){
     if(position == 1){
         node* temp = head;
         head = head->next;
-        //memory free
+        
         temp->next=NULL;
+        //memory free
         delete temp; // deleting by using manual distructor
     }
 
