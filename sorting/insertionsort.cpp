@@ -3,6 +3,7 @@
 using namespace std;
 //time complexity , O(n(n+1)/2) =O(n^2), worst case / as well in best case;
 //space complexity , is O(1);,constant
+// find the element lesser than the current element and swap it
 //insertion sort is stable sorting algorithm because it doesn't change the order of same element
 void insertionsort(vector<int> &v){ 
     int a;
