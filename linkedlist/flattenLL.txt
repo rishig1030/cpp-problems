@@ -1,0 +1,92 @@
+// flatten a linked list, where each element of horizotal linked list have vertical linked list in sorted order
+// such that the final linked list should be in the sorted order, vertically
+
+// Method - 1
+node* flatten(node* head){
+    vector<int> v;
+    Node* temp = root;
+    while(temp){
+        Node* temp1= temp;
+        while(temp1){
+            v.push_back(temp1->data);
+            temp1= temp1->bottom;
+        }
+       temp= temp->next;
+    }
+    sort(v.begin(),v.end());
+    Node* head = NULL;
+    Node* tail = NULL;
+    for(int i=0;i<v.size();i++){
+        Node* n1 = new Node(v[i]);
+        if(!head){
+            head= n1;
+            tail = n1;
+        }
+        else{
+            tail->bottom =n1;
+            tail = n1;
+        }
+    }
+    return head;
+}
+
+//Method - 2
+Node *flatten(Node *root)
+{
+   // Your code here
+    if(root){
+        Node* temp1 = root;
+        Node* temp2 = flatten(root->next);
+        
+        Node* head = NULL;
+        Node* temp = head;
+        while(temp1 &&  temp2){
+            if(temp1->data < temp2->data){
+                if(!head){
+                    head = temp1;
+                    temp = temp1;
+                }
+                else{
+                    temp->bottom = temp1;
+                    temp = temp1;
+                }
+                temp1= temp1->bottom;
+            }
+            else{
+                if(!head){
+                    head = temp2;
+                    temp = temp2;
+                }
+                else{
+                    temp->bottom = temp2;
+                    temp = temp2;
+                }
+                temp2 = temp2->bottom;
+            }
+        }
+        while(temp1){
+            if(!head){
+                    head = temp1;
+                    temp = temp1;
+                }
+                else{
+                    temp->bottom = temp1;
+                    temp = temp1;
+                }
+                temp1= temp1->bottom;
+        }
+        while(temp2){
+            if(!head){
+                    head = temp2;
+                    temp = temp2;
+                }
+                else{
+                    temp->bottom = temp2;
+                    temp = temp2;
+                }
+                temp2 = temp2->bottom;
+        }
+        return head;
+    }
+    else return NULL;
+}
