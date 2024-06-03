@@ -1,4 +1,4 @@
-//short an array using recursion
+//sort an array using recursion
 #include<iostream>
 #include<stack>
 
