@@ -2,6 +2,7 @@
 //ceil : smallest number in array >= target
 //determine floor and ceil in an array
 //time complexity is O(log2N)
+#include<iostream>
 using namespace std;
 
 int ceil(int arr[],int left,int right,int target,int n){
