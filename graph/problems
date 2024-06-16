@@ -1,0 +1,9 @@
+1. Find the Number of Provinces in a Graph
+sol , in LeetCode 
+Provinces here is basically the number of disconnected graphs
+
+2. Number of island
+sol , in LeetCode
+Given a MxN matrix , 1st is the land and 0 is water , 
+it is consider as island if horizontally and vertically 1s is surrounded by water i.e. 0
+
