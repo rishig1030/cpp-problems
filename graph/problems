@@ -12,3 +12,9 @@ sol , in LeetCode
 given a MxN matrix, starting rows & Column and color , 
 we need to change the color of all the adjusent pixel have same color as 
 staring node i.e. connected with all other box horizontally and vertically
+
+4. rotten orange problem
+sol , in LeetCode
+given a MxN matrix , 0 is empty and 1 is fresh , 2 is rotten ,
+rotten orange will rot the fresh orange horizontally and vertically only in unit time
+find the minimum time required to rot all ornage if possible
