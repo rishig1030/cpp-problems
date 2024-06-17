@@ -7,3 +7,8 @@ sol , in LeetCode
 Given a MxN matrix , 1st is the land and 0 is water , 
 it is consider as island if horizontally and vertically 1s is surrounded by water i.e. 0
 
+3. flood fill
+sol , in LeetCode
+given a MxN matrix, starting rows & Column and color , 
+we need to change the color of all the adjusent pixel have same color as 
+staring node i.e. connected with all other box horizontally and vertically
