@@ -18,3 +18,14 @@ sol , in LeetCode
 given a MxN matrix , 0 is empty and 1 is fresh , 2 is rotten ,
 rotten orange will rot the fresh orange horizontally and vertically only in unit time
 find the minimum time required to rot all ornage if possible
+
+5. replace all the zeros surrounded by X with X
+sol , in LeetCode
+if Os are present at the boundary and O connected to boundary zeros are not surrounded by X;
+
+6. Number of Enclaves , 
+Number of One surrounded by O 
+
+7. Number of distinct island
+sol , in GeeksForGeeks
+
