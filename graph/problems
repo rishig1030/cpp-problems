@@ -29,3 +29,7 @@ Number of One surrounded by O
 7. Number of distinct island
 sol , in GeeksForGeeks
 
+8. check wheather the graph is bipatite or not
+sol , in LeetCode
+bipatite is a graph which can be coloured with two diffrent color 
+such that no two adjacent node have same color.
