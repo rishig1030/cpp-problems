@@ -13,6 +13,8 @@ vector<int> topological(int nodes,vector<int> arr[]){
     vector<int> v;
     queue<int> q;
     int indegree[nodes] ={0};
+    // indegree is basically the incoming edges to a particular nodes
+
     for(int i=0;i<nodes;i++){
         for(int it : arr[i]){
             indegree[it]++;
