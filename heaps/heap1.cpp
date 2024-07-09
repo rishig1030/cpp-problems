@@ -2,7 +2,7 @@
 using namespace std;
 
 //implementing heap using array
-//max heap
+//max heap - min heap
 class heap{
     public:
     int arr[100];
@@ -12,7 +12,8 @@ class heap{
         arr[0]=-1;
         size=0;
     }
-    
+    // inserting in max heap
+    // time complexity is O(logN), comparing every time with its height
     void insert(int val){
         size++;
         int index = size;
@@ -27,6 +28,24 @@ class heap{
             else{
                 return ;
             }
+        }
+    }
+
+    // inserting in min heap
+    // time complexity is O(logN), comparing every time with its height
+
+    void insertmin(int x){
+        size++;
+        int index = size;
+        arr[index] = x;
+
+        while(index>1){
+            int parent = index/2;
+            if(arr[parent]>arr[index]){
+                swap(arr[parent],arr[index]);
+                index = parent;
+            }
+            else return ;
         }
     }
 
@@ -45,7 +64,7 @@ class heap{
             return ;
         }
         //first element = last element 
-        arr[1]= arr[size];
+        arr[1] = arr[size];
         //remove last element
         size--;
 
@@ -62,6 +81,27 @@ class heap{
             else if(rightchild<=size && arr[i]<arr[rightchild]){
                 swap(arr[i],arr[rightchild]);
                 i=rightchild;
+            }
+            else return ;
+        }
+    }
+
+    // delete a node
+    void deleteANodePractice(){
+        // delete a root node;
+        arr[1] = arr[size];
+        size--;
+        int index = 1;
+        while(index<size){
+            int leftchild = 2*index;
+            int rightchild = 2*index + 1;
+            if(leftchild<=size && arr[leftchild]>arr[index]){
+                swap(arr[leftchild],arr[index]);
+                index = leftchild;
+            }
+            else if(rightchild<=size && arr[rightchild]>arr[index]){
+                swap(arr[leftchild],arr[index]);
+                index = rightchild;
             }
             else return ;
         }
